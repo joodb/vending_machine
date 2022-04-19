@@ -4,27 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
 </head>
 <body>
-    <section>
-        <h1>밴딩머신</h1>
-        <section class="vending">
-            <div class="display-wrap">
-                <div class="display "></div>
-                <div class="display "></div>
-                <div class="display "></div>
-                <div class="display "></div>
-                <div class="display "></div>
+    <img class="img-logo" src="./images/Logo_img.png" alt="">    
+
+    <main class="main-vending">
+        <section class="vending cont-choose">
+            <h1>밴딩머신</h1> 
+    
+            <!-- 음료수 -->
+            <div class="drink-wrap">
                 <div class="display "></div>
             </div>
-            
+    
+            <p class="change-view">잔액: </p>
+            <button class="change-btn" type="button">거스름돈 반환</button>
+    
+            <input class="price-view" type="text" name="" id="" placeholder="입금액 입력">
+            <button class="price-btn"  type="button">입금</button>
+            <ul class="getDrink-wrap">
+                <li></li>
+                <li></li>
+            </ul>
+            <button class="getDrink-btn" type="button">획득</button>
         </section>
-        <section class="vending">
-            <h1></h1>
-            <div></div>
             
+        <section class="vending getDrink-wrap">
+        <div class="vending">
+            <p class="money-view">소지금: 25,000원</p>
+        </div>
+        
+            <h2>획득한 음료 </h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p class="totalPrice"></p>
         </section>
-    </section>
+    </main>
+
+    
 </body>
 </html>

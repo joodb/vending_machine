@@ -85,7 +85,7 @@ a {
     color: #000;
 }
 
-.txt-hide {
+.ir {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -98,3 +98,4 @@ img {
     width: 100%;
     vertical-align: top;
 }
+

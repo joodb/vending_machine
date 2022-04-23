@@ -2,20 +2,88 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-/* reset.css */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -25,15 +93,23 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
 body {
     line-height: 1;
 }
-
 
 ol,
 ul {
@@ -58,44 +134,21 @@ table {
     border-spacing: 0;
 }
 
-p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,select,button,code,label,em,span,strong {
-    /* 단어 단위로 떨어져 내리게끔 */
-    word-break:keep-all;
-}
-/* 익스플로러 하위 버전에서 a > img일 경우 보더가 생김 */
-img,fieldset{border:0}
-legend{
-    position:absolute;
-    left:-9999px;
-    font-size:0;
-    overflow:hidden;
-}
-
-input,select,textarea{
-    /* 모바일 기본 제공 스타일 제거 */
-    -webkit-appearance:none;
-    -moz-appearance:none;
-}
-/* IE 셀렉박스 기본 화살표 제거 */
-select::-ms-expand{display:none;}
-/* 프로젝트마다 매우 상이하기 때문에 추후 변경 가능. */
-
-a {
-    text-decoration: none;
-    color: #000;
+button {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
 }
 
 .ir {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    display: block;
     overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
 }
-
-img {
-    width: 100%;
-    vertical-align: top;
-}
-

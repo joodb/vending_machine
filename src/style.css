@@ -4,14 +4,14 @@
     --main-color: #6327FE;
     --back-color: #EAE8FE;
     --drink-txt-color: #333333;
+    --line-color: #BDBDBD;
 }
 
 body {
     background-color: var(--back-color);
-    font-family: 'Noto Sans KR', sans-serif;
 }
 
-.img-item {
+.img-drink {
     display: block;
 }
 
@@ -21,6 +21,7 @@ body {
     justify-content: center;
     gap: 0 28px;
     padding: 248px 0 50px;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #cola-cola .vending-machine, 
@@ -30,7 +31,7 @@ body {
     box-sizing: border-box;    
 }
 
-#cola-cola .vending-machine{
+#cola-cola .vending-machine {
     padding: 31px 27px 28px;
 }
 
@@ -48,6 +49,7 @@ body {
 #app .vending-machine {
     padding: 31px 27px 28px;
 }
+
 
 .vending-machine .list-drink {
     display: grid;
@@ -80,7 +82,7 @@ body {
     width: 36px;
     margin: 0 auto;
 }
-.vending-machine .list-drink .title-item {
+.vending-machine .list-drink .title-drink {
     display: block;
     font-size: 9px;
     line-height: 13px;
@@ -144,10 +146,16 @@ body {
 
 .content-buy .btn-return,
 .content-buy .btn-put,
-.content-buy .btn-get {
-    font-size: 13px;
+.content-buy .btn-choose {
     border-radius: 5px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    line-height: 19px;
+}
+
+.content-buy .btn-return,
+.content-buy .btn-put{
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .content-buy .info-change {
@@ -161,16 +169,144 @@ body {
 }
 
 .content-buy .input-put {
-    border: 1px solid #BDBDBD;
+    outline: none;
+    border: 1px solid var(--line-color);
 }
 
 .content-buy .list-choose {
-    
+    overflow-y: scroll;
+    height: 106px;
+    background-color: var(--back-color);
+    border: 1px solid var(--line-color);
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 
-.content-buy .btn-get {
+/* scroll bar */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    background-clip: padding-box;
+    border-radius: 15px;
+    border-width: 4px;
+    border-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    box-shadow: transparent 0 0 0 inset;
+    border: 0;
+}
+
+.list-choose li {
+    padding: 6px 8px 6px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+}
+
+.list-choose .btn-drink {
+    display: flex;
+}
+.list-choose .img-drink {
+    width: 18px;    
+}
+
+.list-choose li+li {
+    margin-top: 6px;
+}
+
+.list-choose .title-drink {
+    margin-left: 10px;
+    line-height: 33px;
+    font-size: 9px; 
+}
+
+
+.list-choose .count-choose {
+    margin-left: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+}
+
+.content-buy .btn-choose {
     font-weight: 700;
-    background-color: #6327FE;
+    background-color: var(--main-color);
     color: #fff;
+}
+
+/* 오른쪽 영역 */
+#cola-cola  .my-info {
+    background-color: #EAE8FE;
+}
+
+.my-info .content-money {
+    width: 306px;
+    padding: 9px 27px;
+    background-color: #fff;
+}
+
+.content-money .info-money {
+    padding: 6px 10px;
+    background-color: var(--back-color);
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.content-money .txt-money {
+    font-weight: 700;
+    float: right;
+}
+
+
+.my-info .content-get {
+    padding: 25px 27px 32px;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+
+.my-info .title-get {
+    display: block;
+    text-align: center;
+    margin-bottom: 13px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.content-get .list-choose {
+    width: 306px;
+    height: 364px;
+    padding: 12px 18px 12px 12px;
+    background-color: var(--back-color);
+    border-radius: 5px;
+    overflow-y: scroll;
+    background-color: #EAE8FE;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+}
+
+.content-get .info-total {
+    margin: 6px 0 26px;
+    font-weight: 500;
+    font-size: 12px;
+    float: right;
+}
+
+.content-get::after {
+    content: '';
+    display: block;
+    clear: both;
 }

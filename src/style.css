@@ -320,6 +320,7 @@ body {
     
     #cola-cola {
         padding-top: 65px;
+        padding-bottom: 0px;
     }
 
     #cola-cola .title-cola {
@@ -328,7 +329,7 @@ body {
     }
 
     .my-info .content-get {
-        margin-top: 0;
+        margin-top: 0px;
         padding: 31px 27px 32px;
     }
 

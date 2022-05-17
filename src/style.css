@@ -312,8 +312,15 @@ body {
 }
 
 
-/* media query */
-@media screen and ( min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio:2) {
+/* 태블릿 */
+@media (max-width: 751px) {
+    .my-info .content-get {
+        margin-top: 0px;
+        padding: 31px 27px 32px;
+    }
+}
+
+    @media screen and ( min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio:2) {
     body {
         background-color: #fff;
     }
